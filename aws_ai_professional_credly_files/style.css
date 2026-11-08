@@ -1,0 +1,681 @@
+/* 
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #263746;
+    font-size: 13px;
+}
+
+/* Navigation */
+.navbar {
+    height: 80px;
+    border-bottom: 1px solid #dedede;
+    background: #fff;
+}
+
+.nav-container {
+    max-width: 855px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Credly Logo */
+.credly-logo {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.credly-logo span {
+    color: #f47735;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.credly-logo small {
+    font-size: 7px;
+    color: #555;
+    margin-top: -5px;
+}
+
+/* Search */
+.search-box {
+    height: 37px;
+    border: 1px solid #aaa;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-icon {
+    font-size: 23px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    color: #444;
+}
+
+.search-box input::placeholder {
+    color: #858585;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 17px;
+    margin-left: 45px;
+    flex-shrink: 0;
+}
+
+.nav-buttons button {
+    height: 41px;
+    padding: 0 16px;
+    font-size: 11px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.create-btn {
+    background: white;
+    border: 1px solid #668c89;
+    color: #244b49;
+}
+
+.signin-btn {
+    background: #285550;
+    color: white;
+    border: 1px solid #285550;
+    font-weight: bold;
+}
+
+/* Recipient Bar */
+.recipient-bar {
+    height: 95px;
+    background: #f3eff0;
+}
+
+.recipient-container {
+    max-width: 855px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Profile Icon */
+.profile-icon {
+    height: 66px;
+    width: 66px;
+    border: 1px solid #d2d0d0;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.profile-icon svg {
+    width: 43px;
+    height: 43px;
+    color: #aaa;
+}
+
+/* Recipient Details */
+.recipient-info {
+    margin-left: 22px;
+    flex: 1;
+}
+
+.recipient-info p {
+    font-size: 11px;
+    margin: 5px 0;
+    color: #39464d;
+}
+
+.recipient-info a {
+    color: #426b7c;
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 4px;
+}
+
+/* Verify and Celebrate */
+.recipient-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.recipient-actions button {
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.verify-btn {
+    border: none;
+    color: #285c57;
+    text-decoration: underline;
+}
+
+.verify-btn span {
+    margin-right: 7px;
+}
+
+.celebrate-btn {
+    border: 1px solid #648984;
+    border-radius: 3px;
+    color: #315e5b;
+    padding: 10px 17px;
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 855px;
+    margin: 39px auto 60px;
+    display: grid;
+    grid-template-columns: 255px 1fr;
+    gap: 30px;
+}
+
+/* Badge Position */
+.badge-column {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+}
+
+/* Hexagonal Badge */
+.aws-badge {
+    width: 220px;
+    height: 249px;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.08));
+}
+
+.badge-border {
+    width: 100%;
+    height: 100%;
+    background: #63c5ee;
+    clip-path: polygon(
+        50% 0%,
+        99% 25%,
+        99% 75%,
+        50% 100%,
+        1% 75%,
+        1% 25%
+    );
+    padding: 7px;
+}
+
+.badge-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        145deg,
+        #448fa2 0%,
+        #337d91 55%,
+        #28516f 100%
+    );
+    clip-path: polygon(
+        50% 0%,
+        99% 25%,
+        99% 75%,
+        50% 100%,
+        1% 75%,
+        1% 25%
+    );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 12px;
+}
+
+.aws-logo {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.aws-check {
+    display: inline-block;
+    font-size: 13px;
+    background: #f3a42c;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 3px;
+    margin-left: 3px;
+    vertical-align: 4px;
+}
+
+.certified {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 7px;
+}
+
+.badge-divider {
+    width: 75%;
+    height: 1px;
+    background: rgba(255,255,255,0.65);
+    margin-bottom: 10px;
+}
+
+.badge-title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.bottom-divider {
+    margin-top: 10px;
+    margin-bottom: 9px;
+}
+
+.professional {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* Badge Details */
+.details-column h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #171717;
+    margin-bottom: 14px;
+}
+
+.issued-by {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.issued-by a {
+    color: #315f70;
+    text-decoration: underline;
+}
+
+/* Labels */
+.badge-labels {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.badge-labels span {
+    background: #f0eeee;
+    padding: 5px 10px;
+    font-size: 11px;
+    border-radius: 3px;
+    color: #29353c;
+}
+
+/* Description */
+.description {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #293b48;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    color: #426d7c;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+/* Certification Criteria */
+.criteria-section {
+    margin-top: 39px;
+}
+
+.details-column h3 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #242424;
+}
+
+.criteria-section ul {
+    padding-left: 15px;
+}
+
+.criteria-section li {
+    font-size: 12px;
+    line-height: 1.7;
+    padding-left: 0;
+    color: #394957;
+}
+
+.criteria-section li a {
+    color: #315d59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Skills */
+.skills-section {
+    margin-top: 34px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills-list span {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 7px 11px;
+    color: #426b7b;
+    font-size: 11px;
+    background: white;
+}
+
+/* Hover Effects */
+.create-btn:hover,
+.celebrate-btn:hover {
+    background: #edf5f3;
+}
+
+.signin-btn:hover {
+    background: #1b403d;
+}
+
+.skills-list span:hover {
+    background: #f1f6f8;
+}
+
+/* Responsive Layout */
+@media (max-width: 950px) {
+    .nav-container,
+    .recipient-container,
+    .main-container {
+        width: 92%;
+    }
+
+    .nav-buttons {
+        margin-left: 5px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search-box {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .nav-buttons {
+        margin-left: auto;
+    }
+
+    .recipient-bar {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .recipient-container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .recipient-info {
+        margin-left: 5px;
+        min-width: 0;
+    }
+
+    .recipient-actions {
+        margin-left: auto;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .badge-column {
+        justify-content: center;
+    }
+
+    .details-column h1 {
+        font-size: 22px;
+    }
+} */
+
+/* =================================
+   MAIN CONTENT - 100% BROWSER ZOOM
+================================= */
+
+.main-container {
+    max-width: 1058px;
+    width: calc(100% - 40px);
+    margin: 48px auto 60px;
+
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 33px;
+    align-items: start;
+}
+
+/* =================================
+   AWS BADGE
+================================= */
+
+.badge-column {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+}
+
+.aws-badge {
+    width: 290px;
+    height: 331px;
+}
+
+/* =================================
+   CREDENTIAL TITLE
+================================= */
+
+.details-column h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: bold;
+    color: #171717;
+    margin-bottom: 18px;
+}
+
+.issued-by {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* =================================
+   CERTIFICATION LABELS
+================================= */
+
+.badge-labels {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 31px;
+}
+
+.badge-labels span {
+    background: #f0eeee;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    color: #29353c;
+}
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.description {
+    font-size: 16px;
+    line-height: 1.73;
+    color: #293b48;
+    margin-bottom: 27px;
+}
+
+.learn-more {
+    color: #426d7c;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+/* =================================
+   CERTIFICATION CRITERIA
+================================= */
+
+.criteria-section {
+    margin-top: 52px;
+}
+
+.details-column h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #242424;
+}
+
+.criteria-section ul {
+    padding-left: 20px;
+}
+
+.criteria-section li {
+    font-size: 15px;
+    line-height: 1.8;
+    padding-left: 0;
+    color: #394957;
+}
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-section {
+    margin-top: 50px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.skills-list span {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 9px 12px;
+    color: #426b7b;
+    font-size: 14px;
+    background: white;
+}
+
+/* =================================
+   RELATED SECTION
+================================= */
+
+.related-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.related-section h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.related-section .underline {
+    width: 65px;
+    height: 4px;
+    background: #888;
+    margin: auto;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+    .main-container {
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    .aws-badge {
+        width: 235px;
+        height: 270px;
+    }
+
+    .details-column h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 650px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 30px;
+    }
+
+    .badge-column {
+        justify-content: center;
+    }
+
+    .details-column h1 {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,36 @@
+const credentialURL =
+  "https://www.credly.com/badges/f1d914b9-73e9-4344-891a-63029827d659";
+
+document.getElementById("verifyBtn").addEventListener("click", () => {
+  window.open(credentialURL, "_blank", "noopener,noreferrer");
+});
+
+document.getElementById("celebrateBtn").addEventListener("click", async () => {
+  const shareData = {
+    title: "AWS Certified Security – Specialty",
+    text: "I'm sharing my AWS Certified Security – Specialty badge!",
+    url: credentialURL
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+    } catch (error) {
+      if (error.name !== "AbortError") console.error("Sharing failed:", error);
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(credentialURL);
+      alert("Credential link copied! Share your achievement.");
+    } catch {
+      alert("Unable to copy the credential link. Please copy it manually.");
+    }
+  }
+});
+
+const searchInput = document.querySelector(".search-box input");
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && searchInput.value.trim()) {
+    alert("Search functionality requires a Credly search service.");
+  }
+});
