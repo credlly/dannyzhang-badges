@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matthew Purcell - Credly Profile</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2b2b2b;
+      background-color: #ffffff;
+      padding-bottom: 60px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 48px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 26px;
+      color: #e06d28;
+      text-decoration: none;
+      font-family: Georgia, serif;
+    }
+    .logo span {
+      font-size: 11px;
+      display: block;
+      color: #666;
+      font-family: sans-serif;
+      letter-spacing: 0.5px;
+      margin-top: -4px;
+    }
+    .search-bar-header {
+      display: flex;
+      align-items: center;
+      border: 1px solid #718096;
+      border-radius: 20px;
+      padding: 8px 16px;
+      width: 480px;
+      background: #fff;
+    }
+    .search-bar-header input {
+      border: none;
+      outline: none;
+      width: 100%;
+      margin-left: 8px;
+      font-size: 14px;
+      color: #4a5568;
+    }
+    .auth-buttons {
+      display: flex;
+      gap: 12px;
+    }
+    .btn-outline {
+      padding: 8px 18px;
+      border: 1.5px solid #1a4d46;
+      color: #1a4d46;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .btn-solid {
+      padding: 8px 18px;
+      background-color: #1a4d46;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .profile-container {
+      text-align: center;
+      padding: 40px 20px 30px;
+    }
+    .profile-name {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 6px;
+    }
+    .profile-title {
+      font-size: 15px;
+      color: #4a5568;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background-color: #0077b5;
+      color: white;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .content-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a202c;
+      margin-bottom: 24px;
+    }
+    .controls-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .search-filter-box {
+      flex: 1;
+      position: relative;
+    }
+    .search-filter-box label {
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      background: white;
+      padding: 0 6px;
+      font-size: 12px;
+      color: #718096;
+    }
+    .search-filter-input {
+      width: 100%;
+      padding: 12px 14px 12px 38px;
+      border: 1px solid #cbd5e0;
+      border-radius: 24px;
+      font-size: 14px;
+      outline: none;
+    }
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a0aec0;
+    }
+    .sort-box {
+      position: relative;
+      width: 220px;
+    }
+    .sort-box label {
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      background: white;
+      padding: 0 6px;
+      font-size: 12px;
+      color: #718096;
+    }
+    .avatar-letter {
+      width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #1a4d46 0%, #2d68c4 100%);
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Center above Danny Zhang */
+    margin: 0 auto 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .sort-select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e0;
+      border-radius: 24px;
+      font-size: 14px;
+      outline: none;
+      background: white;
+      appearance: none;
+      cursor: pointer;
+    }
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .badge-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .badge-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+    .badge-icon-wrap {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    .badge-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .badge-issuer {
+      font-size: 12px;
+      color: #718096;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-section">
+      <a href="#" class="logo">Credly<span>by Pearson</span></a>
+      <div class="search-bar-header">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search by badge name, organization, skill, occupation or learning pathway">
+      </div>
+    </div>
+    <div class="auth-buttons">
+      <a href="#" class="btn-outline">Create Account</a>
+      <a href="#" class="btn-solid">Sign In</a>
+    </div>
+  </header>
+
+  <section class="profile-container">
+    <div class="avatar-letter">D</div>
+    <h1 class="profile-name">Danny Zhang</h1>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Badge Wallet</h2>
+
+    <div class="controls-row">
+      <div class="search-filter-box">
+        <label>Search</label>
+        <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="badgeSearch" class="search-filter-input" placeholder="Search by badge name or issuer" onkeyup="filterBadges()">
+      </div>
+      <div class="sort-box">
+        <label>Sort by</label>
+        <select class="sort-select">
+          <option>Default</option>
+          <option>Name A-Z</option>
+          <option>Newest</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="badge-grid" id="badgeGrid">
+      <a href="./aws_security_specialty_credly_files/index.html" class="badge-card" data-name="AWS Certified Security – Specialty">
+        <div class="badge-icon-wrap">
+          <svg width="100" height="110" viewBox="0 0 100 110">
+            <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#4d2782" />
+            <text x="50" y="45" font-size="9" fill="white" font-weight="bold" text-anchor="middle">aws</text>
+            <text x="50" y="55" font-size="7" fill="white" text-anchor="middle">certified</text>
+            <text x="50" y="68" font-size="7" fill="white" font-weight="bold" text-anchor="middle">Security</text>
+            <text x="50" y="78" font-size="6" fill="#e2e8f0" text-anchor="middle">SPECIALTY</text>
+          </svg>
+        </div>
+        <div class="badge-title">AWS Certified Security – Specialty</div>
+        <div class="badge-issuer">Amazon Web Services Training and...</div>
+      </a>
+
+      <a href="./aws_cloud_practitioner_credly_files/index.html" class="badge-card" data-name="AWS Certified Cloud Practitioner">
+        <div class="badge-icon-wrap">
+          <svg width="100" height="110" viewBox="0 0 100 110">
+            <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#2d68c4" />
+            <text x="50" y="45" font-size="9" fill="white" font-weight="bold" text-anchor="middle">aws</text>
+            <text x="50" y="55" font-size="7" fill="white" text-anchor="middle">certified</text>
+            <text x="50" y="68" font-size="7" fill="white" font-weight="bold" text-anchor="middle">Cloud Practitioner</text>
+          </svg>
+        </div>
+        <div class="badge-title">AWS Certified Cloud Practitioner</div>
+        <div class="badge-issuer">Amazon Web Services Training and...</div>
+      </a>
+
+      <a href="./aws_ai_practitioner_credly_files/index.html" class="badge-card" data-name="AWS Certified AI Practitioner">
+        <div class="badge-icon-wrap">
+          <svg width="100" height="110" viewBox="0 0 100 110">
+            <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#a82062" />
+            <text x="50" y="45" font-size="9" fill="white" font-weight="bold" text-anchor="middle">aws</text>
+            <text x="50" y="55" font-size="7" fill="white" text-anchor="middle">certified</text>
+            <text x="50" y="68" font-size="7" fill="white" font-weight="bold" text-anchor="middle">AI Practitioner</text>
+          </svg>
+        </div>
+        <div class="badge-title">AWS Certified AI Practitioner</div>
+        <div class="badge-issuer">Amazon Web Services Training and...</div>
+      </a>
+
+      <a href="./aws_ai_professional_credly_files/index.html" class="badge-card" data-name="AWS Certified Generative AI Developer - Professional">
+        <div class="badge-icon-wrap">
+          <svg width="100" height="110" viewBox="0 0 100 110">
+            <polygon points="50,5 95,30 95,80 50,105 5,80 5,30" fill="#321f87" />
+            <text x="50" y="42" font-size="8" fill="white" font-weight="bold" text-anchor="middle">aws</text>
+            <text x="50" y="52" font-size="6.5" fill="white" text-anchor="middle">certified</text>
+            <text x="50" y="64" font-size="6" fill="white" font-weight="bold" text-anchor="middle">Generative AI</text>
+            <text x="50" y="72" font-size="6" fill="white" font-weight="bold" text-anchor="middle">Developer</text>
+            <text x="50" y="82" font-size="5" fill="#e2e8f0" text-anchor="middle">PROFESSIONAL</text>
+          </svg>
+        </div>
+        <div class="badge-title">AWS Certified Generative AI Developer – Professional</div>
+        <div class="badge-issuer">Amazon Web Services Training and...</div>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    function filterBadges() {
+      const query = document.getElementById('badgeSearch').value.toLowerCase();
+      const cards = document.querySelectorAll('.badge-card');
+      cards.forEach(card => {
+        const title = card.getAttribute('data-name').toLowerCase();
+        if (title.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
