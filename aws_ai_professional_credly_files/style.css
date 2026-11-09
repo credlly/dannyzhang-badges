@@ -753,3 +753,7 @@ body {
 .verification-status {
     border-bottom: none;
 }
+.aws-badge img {
+    transform: scale(1.25) translateX(-20px);
+    transform-origin: center;
+}
