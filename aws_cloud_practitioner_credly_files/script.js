@@ -1,8 +1,22 @@
 const credentialURL =
   "https://www.credly.com/badges/eda869b0-7fe0-4a6d-8dc4-b4e0268ece8d";
 
+const verificationModal = document.getElementById("verificationModal");
+
 document.getElementById("verifyBtn").addEventListener("click", () => {
-  window.open(credentialURL, "_blank", "noopener,noreferrer");
+    
+
+    verificationModal.classList.add("active");
+});
+
+document.getElementById("closeVerification").addEventListener("click", () => {
+    verificationModal.classList.remove("active");
+});
+
+verificationModal.addEventListener("click", (event) => {
+    if (event.target === verificationModal) {
+        verificationModal.classList.remove("active");
+    }
 });
 
 document.getElementById("celebrateBtn").addEventListener("click", async () => {

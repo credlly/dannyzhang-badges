@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danny Zhang - Credly Profile</title>
+  <title>Danny Zhang - Credlly Profile</title>
   <style>
     * {
       box-sizing: border-box;
@@ -317,9 +317,30 @@
 }
 
 .badge-art-check {
-  color: #f3a42c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 13px;
+  height: 13px;
+
+  background: #f3a42c;
+  color: #ffffff;
+
   font-size: 9px;
-  margin-left: 2px;
+  font-weight: bold;
+  line-height: 1;
+
+  margin-left: 3px;
+
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
 }
 
 .badge-art-certified {
@@ -354,13 +375,18 @@
   letter-spacing: 1px;
   line-height: 1;
 }
+.badge-card[data-name="AWS Certified Cloud Practitioner"] .badge-art-background,
+.badge-card[data-name="AWS Certified AI Practitioner"] .badge-art-background {
+    background: #3E4654 !important;
+    border-color: #D9DADB;
+}
   </style>
 </head>
 <body>
 
   <header>
     <div class="brand-section">
-      <a href="#" class="logo">Credly<span>by Pearson</span></a>
+      <a href="#" class="logo">Credlly<span>by Pearson</span></a>
     </div>
   </header>
 
@@ -410,7 +436,7 @@
 
       <a href="./aws_cloud_practitioner_credly_files/index.html" class="badge-card" data-name="AWS Certified Cloud Practitioner">
         <div class="badge-art" style="
-  --badge-border: #83b9ed;
+  --badge-border: #D9DADB;
   --badge-background: linear-gradient(145deg, #448fc4, #19477f);
 ">
   <div class="badge-art-border">
@@ -428,7 +454,7 @@
 
       <a href="./aws_ai_practitioner_credly_files/index.html" class="badge-card" data-name="AWS Certified AI Practitioner">
         <div class="badge-art" style="
-  --badge-border: #e58bb9;
+  --badge-border: #D9DADB;
   --badge-background: linear-gradient(145deg, #d34d91, #781344);
 ">
   <div class="badge-art-border">
